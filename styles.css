@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: #0a2a43; /* لون خلفية زرقاء داكنة */
+}
+
+.background-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    background: linear-gradient(120deg, transparent, rgba(0, 115, 230, 0.2) 20%, transparent),
+                linear-gradient(60deg, transparent, rgba(0, 115, 230, 0.2) 20%, transparent),
+                #0a2a43;
+    background-size: 200% 200%;
+    animation: wave 10s infinite linear;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    z-index: 1; /* لضمان بقاء الواجهة فوق الخلفية المتحركة */
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0072ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+.footer-links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #0072ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 100px; /* تحديد حجم الشعار */
+        height: auto;
+    border-radius: 50%; /* جعل الشعار دائري */
+        border: 2px solid #fff; /* إضافة حدود للشعار */
+}
+
+.bottom-logo {
+    position: fixed; /* ثبات الشعار في أسفل الصفحة */
+        bottom: 21px; /* المسافة من الأسفل */
+        left: 20px; /* المسافة من اليسار */
+        text-align: left;
+}
+
+.bottom-logo img {
+    max-width: 100px; /* تحديد حجم الشعار السفلي */
+        height: auto;
+    border: none; /* إزالة الحدود لتكون الصورة غير دائرية */
+}
